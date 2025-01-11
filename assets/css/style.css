@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Preclasses Section */
+:root {
+    --primary-color: #B9FF66;
+    --primary-color-rgb: 185, 255, 102;
+    --secondary-color: #191A23;
+    --secondary-color-rgb: 25, 26, 35;
+    --trenary-color: #F3F3F3;
+    --ternary-color-rgb: 243, 243, 243;
+    --white: #fff;
+    --white-rgb: 255, 255, 255;
+    --black: #000;
+    --black-rgb: 0, 0, 0;
+    --text-primary: 'Space Grotesk';
+    --fw: 400;
+    --fs: 16px;
+    --lh: 1.5;
+    --gw: 15px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: var(--black);
+    font-family: var(--text-primary);
+    font-size: var(--fs);
+    font-weight: var(--fw);
+    line-height: var(--lh);
+
+}
+.container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gw));
+    margin-right: calc(-1 * var(--gw));
+}
+img {
+    display: block;
+    width: 100%;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+h3{
+    font-size: 30px;
+}
+h4 {
+    font-size: 30px;
+}
+p{
+    font-size: 18px;
+}
+.col-1 {
+    width: 8.3333%;
+}
+.col-2 {
+    width: 16.6666%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.3333%;
+}
+.col-5 {
+    width: 41.6666%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.3333%;
+}
+.col-8 {
+    width: 66.6666%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.3333%;
+}
+.col-11 {
+    width: 91.6666%;
+}
+.col-10 {
+    width: 100%;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+    padding-left: var(--gw);
+    padding-right: var(--gw);
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.items-start {
+    align-items: flex-start;
+}
+.items-center {
+    align-items: center;
+}
+.items-end {
+    align-items: flex-end;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-white{
+    color: var(--white);
+}
+.justify-items-center {
+    justify-items: center;
+}
+.py-120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+/* Header Section */
+header{
+    padding: 15px 100px;
+}
+.nav-logo{
+    width: 180px;
+}
+nav ul li{
+    margin-left: 50px;
+}
+.nav-btn{
+    margin-left: 50px;
+    border: 1px solid var(--black);
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+.nav-btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+/* Home Section */
+.home-sec .row{
+    flex-wrap: nowrap;
+}
+.home-text{
+    width: 40%;
+}
+.home-text h1{
+    line-height: 80px;
+}
+.home-text p{
+    margin-top: 30px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+.home-btn{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px 25px;
+    border: 1px solid var(--black);
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.home-btn:hover{
+    background-color: transparent;
+    color: var(--black);
+}
+/* Companies Section */
+.companies img{
+    filter: grayscale(1);
+}
+/* Service Section */
+.service-heading h2{
+    background-color: var(--primary-color);
+    padding: 0 10px;
+}
+.service-heading p{
+    margin-left: 30px;
+    width: 43%;
+}
+.services-card{
+    margin-top: 70px;
+}
+.services-card .card{
+    width: 48%;
+    margin-top: 30px;
+    border: 1px solid var(--black);
+    box-shadow: 0 5px 0 0 var(--black);
+    border-radius: 20px;
+    padding: 70px 90px;
+}
+.card-grey{
+    background-color: var(--trenary-color);
+}
+.card-green{
+    background-color: var(--primary-color);
+}
+.card-dark{
+    background-color: var(--secondary-color);
+}
+.card-text-green, .card-text-white{
+    margin-bottom: 65px;
+}
+.card-text-green h3, .card-text-white h3{
+    padding: 0 10px;
+    border-radius: 15px;
+    width: fit-content;
+}
+.card-text-green h3{
+    background-color: var(--primary-color);
+}
+.card-text-white h3{
+    background-color: var(--white);
+}
+.card-left a{
+    font-size: 20px;
+}
+.card-left a i{
+    font-size: 30px;
+}
