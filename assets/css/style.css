@@ -8,7 +8,7 @@
     --primary-color-rgb: 185, 255, 102;
     --secondary-color: #191A23;
     --secondary-color-rgb: 25, 26, 35;
-    --trenary-color: #F3F3F3;
+    --ternary-color: #F3F3F3;
     --ternary-color-rgb: 243, 243, 243;
     --white: #fff;
     --white-rgb: 255, 255, 255;
@@ -20,6 +20,10 @@
     --lh: 1.5;
     --gw: 15px;
 }
+::selection {
+    color: var(--black);
+    background: #8cff00;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -29,7 +33,6 @@ body {
     font-size: var(--fs);
     font-weight: var(--fw);
     line-height: var(--lh);
-
 }
 .container {
     max-width: 1320px;
@@ -63,13 +66,13 @@ h1 {
 h2 {
     font-size: 40px;
 }
-h3{
+h3 {
     font-size: 30px;
 }
 h4 {
     font-size: 30px;
 }
-p{
+p {
     font-size: 18px;
 }
 .col-1 {
@@ -108,7 +111,7 @@ p{
 .col-10 {
     width: 100%;
 }
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     padding-left: var(--gw);
     padding-right: var(--gw);
 }
@@ -145,7 +148,7 @@ p{
 .text-right {
     text-align: right;
 }
-.text-white{
+.text-white {
     color: var(--white);
 }
 .justify-items-center {
@@ -155,43 +158,7 @@ p{
     padding-top: 120px;
     padding-bottom: 120px;
 }
-/* Header Section */
-header{
-    padding: 15px 100px;
-}
-.nav-logo{
-    width: 180px;
-}
-nav ul li{
-    margin-left: 50px;
-}
-.nav-btn{
-    margin-left: 50px;
-    border: 1px solid var(--black);
-    padding: 15px 20px;
-    border-radius: 20px;
-    transition: all 0.5s ease;
-}
-.nav-btn:hover{
-    background-color: var(--black);
-    color: var(--white);
-}
-/* Home Section */
-.home-sec .row{
-    flex-wrap: nowrap;
-}
-.home-text{
-    width: 40%;
-}
-.home-text h1{
-    line-height: 80px;
-}
-.home-text p{
-    margin-top: 30px;
-    line-height: 28px;
-    margin-bottom: 50px;
-}
-.home-btn{
+.btn {
     background-color: var(--black);
     color: var(--white);
     padding: 15px 25px;
@@ -199,60 +166,131 @@ nav ul li{
     border-radius: 15px;
     transition: all 0.5s;
 }
-.home-btn:hover{
+.btn:hover {
     background-color: transparent;
     color: var(--black);
 }
+/* Header Section */
+header {
+    padding: 15px 100px;
+}
+.nav-logo {
+    width: 180px;
+}
+nav ul li {
+    margin-left: 50px;
+}
+.nav-btn {
+    margin-left: 50px;
+    border: 1px solid var(--black);
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+.nav-btn:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+/* Home Section */
+.home-sec .row, .case-study-card .row {
+    flex-wrap: nowrap;
+}
+.home-text, .proposal-left {
+    width: 40%;
+}
+.home-text h1 {
+    line-height: 80px;
+}
+.home-text p, .proposal-left p {
+    margin-top: 30px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
 /* Companies Section */
-.companies img{
+.companies img {
     filter: grayscale(1);
 }
 /* Service Section */
-.service-heading h2{
+.service-heading h2, .case-study-heading h2, .working-process-heading h2 {
     background-color: var(--primary-color);
     padding: 0 10px;
 }
-.service-heading p{
+.service-heading p, .case-study-heading p, .working-process-heading p {
     margin-left: 30px;
     width: 43%;
 }
-.services-card{
+.services-card {
     margin-top: 70px;
 }
-.services-card .card{
+.services-card .card {
     width: 48%;
     margin-top: 30px;
     border: 1px solid var(--black);
     box-shadow: 0 5px 0 0 var(--black);
     border-radius: 20px;
     padding: 70px 90px;
+    transform: scale(1);
+    transition: all 0.5s;
 }
-.card-grey{
-    background-color: var(--trenary-color);
+.services-card .card:hover {
+    transform: scale(1.05);
 }
-.card-green{
+.card-grey {
+    background-color: var(--ternary-color);
+}
+.card-green {
     background-color: var(--primary-color);
 }
-.card-dark{
+.card-dark {
     background-color: var(--secondary-color);
 }
-.card-text-green, .card-text-white{
+.card-text-green, .card-text-white {
     margin-bottom: 65px;
 }
-.card-text-green h3, .card-text-white h3{
+.card-text-green h3, .card-text-white h3 {
     padding: 0 10px;
     border-radius: 15px;
     width: fit-content;
 }
-.card-text-green h3{
+.card-text-green h3 {
     background-color: var(--primary-color);
 }
-.card-text-white h3{
+.card-text-white h3 {
     background-color: var(--white);
 }
-.card-left a{
+.card-left a, .case-study-text-1 a, .case-study-text-2 a, .case-study-text-3 a  {
     font-size: 20px;
 }
-.card-left a i{
+.card-left a i, .case-study-text-1 a i, .case-study-text-2 a i, .case-study-text-3 a i {
     font-size: 30px;
+}
+/* Proposal Card Section */
+.proposal-card {
+    background-color: var(--ternary-color);
+    border-radius: 25px;
+}
+.proposal-right{
+    transform: scale(1.1);
+}
+/* Case Study Section */
+.case-study-card {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 30px 50px 50px 50px;
+    margin-top: 80px;
+}
+.case-study-text-1, .case-study-text-2, .case-study-text-3 {
+    padding: 25px 50px;
+}
+.case-study-text-1 p, .case-study-text-2 p, .case-study-text-3 p {
+    margin-bottom: 40px;
+}
+.case-study-text-1 a, .case-study-text-2 a, .case-study-text-3 a {
+    color: var(--white);
+}
+.vertical-line{
+    width: 1px;
+    height: 240px;
+    background-color: var(--ternary-color);
 }
