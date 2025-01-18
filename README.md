@@ -25,4 +25,4 @@ To get started with the Positivus Landing Page Design project, follow these step
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/MokshPShah/positivus.git
+   https://github.com/MokshPShah/positivus.git
