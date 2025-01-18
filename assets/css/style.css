@@ -21,7 +21,7 @@
     --gw: 15px;
 }
 ::selection {
-    color: var(--black);
+    color: rgba(var(--black-rgb), 0.75);
     background: #8cff00;
 }
 html {
@@ -211,11 +211,11 @@ nav ul li {
     filter: grayscale(1);
 }
 /* Service Section */
-.service-heading h2, .case-study-heading h2, .working-process-heading h2 {
+.service-heading h2, .case-study-heading h2, .working-process-heading h2, .team-heading h2 {
     background-color: var(--primary-color);
     padding: 0 10px;
 }
-.service-heading p, .case-study-heading p, .working-process-heading p {
+.service-heading p, .case-study-heading p, .working-process-heading p, .team-heading p {
     margin-left: 30px;
     width: 43%;
 }
@@ -239,7 +239,7 @@ nav ul li {
     background-color: var(--ternary-color);
 }
 .card-green {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
 }
 .card-dark {
     background-color: var(--secondary-color);
@@ -258,7 +258,7 @@ nav ul li {
 .card-text-white h3 {
     background-color: var(--white);
 }
-.card-left a, .case-study-text-1 a, .case-study-text-2 a, .case-study-text-3 a  {
+.card-left a, .case-study-text-1 a, .case-study-text-2 a, .case-study-text-3 a {
     font-size: 20px;
 }
 .card-left a i, .case-study-text-1 a i, .case-study-text-2 a i, .case-study-text-3 a i {
@@ -269,7 +269,7 @@ nav ul li {
     background-color: var(--ternary-color);
     border-radius: 25px;
 }
-.proposal-right{
+.proposal-right {
     transform: scale(1.1);
 }
 /* Case Study Section */
@@ -289,8 +289,85 @@ nav ul li {
 .case-study-text-1 a, .case-study-text-2 a, .case-study-text-3 a {
     color: var(--white);
 }
-.vertical-line{
+.vertical-line {
     width: 1px;
     height: 240px;
     background-color: var(--ternary-color);
+}
+/* Working Process */
+.process-block {
+    margin-top: 80px;
+}
+.process-card {
+    background-color: var(--ternary-color);
+    padding: 40px;
+    border: 1px solid var(--black);
+    box-shadow: 0 5px 0 0 var(--black);
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.lable {
+    display: flex;
+    align-items: center;
+}
+.lable>h2 {
+    display: inline-block;
+    margin-right: 30px;
+}
+.lable>span{
+    font-weight: bold;
+    font-size: 27px;
+}
+.hr{
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    margin: 20px 0;
+}
+.process-content>p{
+    font-size: 17px !important;
+}
+/* Team Section */
+.team-heading p {
+    width: 47%;
+}
+.team-card-section{
+    margin: 50px 0;
+}
+.team-card{
+    margin-top: 50px;
+    border: 1px solid var(--black);
+    border-radius: 25px;
+    box-shadow: 0 5px 0 0 var(--black);
+    padding: 40px 50px;
+    height: 340px;
+    position: relative;
+}
+.team-header{
+    margin-bottom: 30px;
+}
+.team-profile{
+    width: 80px;
+}
+.team-profile img{
+    filter: drop-shadow(6px 9px 0px var(--black));
+}
+.team-detail{
+    margin-left: 25px;
+}
+.team-detail p{
+    font-size: 16px;
+}
+.linkedin-icon{
+    align-self: baseline;
+    font-size: 35px;
+    position: absolute;
+    right: 50px;
+}
+.team .btn{
+    position: absolute;
+    right: 115px;
+}
+.team .btn i{
+    padding-bottom: 2px;
 }
